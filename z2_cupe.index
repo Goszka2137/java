@@ -1,0 +1,10 @@
+<html lang="pl-PL">  
+ <HTML> 
+   <HEAD> 
+         <meta charset="utf-8">  
+          <TITLE>SKRYPT zewnętrzny-Cuper</TITLE> 
+<  /HEAD> 
+<BODY> 
+        <SCRIPT type="text/javascript" src="Cuper.js"></SCRIPT> 
+</BODY> 
+</HTML>
