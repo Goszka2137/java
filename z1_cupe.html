@@ -1,16 +1,26 @@
- <!DOCTYPE html>  
+<!DOCTYPE html>  
 <html lang="pl-PL">  
-<HTML> 
 <HEAD> 
 <meta charset="utf-8">   
-<TITLE>Osadzanie pliku JS-Cuper</TITLE> 
+<TITLE>Cuper</TITLE> 
+<script type="text/javascript"> 
+                 function okno_zamknij_cuper()  
+                       { 
+                             window.close() 
+                       } 
+            </script> 
 </HEAD> 
 <BODY> 
+Mam numer w dzienniku 3 <br>
+obramowanie ze znaków ! <br>
+numer koloru obramowania 6 - red <br>
+numer koloru tekstu to 12 - yellow  <br>
 <SCRIPT> 
 document.write("!!!!!!!!!!!!!!!!!!!!!".fontcolor("#0000FF")+"<br>"); 
 document.write("!".fontcolor("#0000FF")+"&nbsp;&nbsp;&nbsp;Małgorzata ".fontcolor("purple")+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*".fontcolor("#FF00FF")+"<br>"); 
 document.write("!".fontcolor("#0000FF")+"&nbsp;&nbsp;&nbsp;Cuper".fontcolor("purple")+"&nbsp;&nbsp;*".fontcolor("#FF00FF")+"<br>"); 
 document.write("!!!!!!!!!!!!!!!!!!!!!".fontcolor("#0000FF")+"<br>"); 
 </SCRIPT> 
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_cuper()"/> 
 </BODY> 
 </HTML>
