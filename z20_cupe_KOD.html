@@ -1,0 +1,56 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 20 </title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <h1>Trójkąt - długości boków</h1>
+  <form>
+    Punkt A: x = <input type="text" id="xa_cuper" value="0">
+    y = <input type="text" id="ya_cuper" value="0"><br><br>
+    Punkt B: x = <input type="text" id="xb_cuper" value="0">
+    y = <input type="text" id="yb_cuper" value="0"><br><br>
+    Punkt C: x = <input type="text" id="xc_cuper" value="0">
+    y = <input type="text" id="yc_cuper" value="0"><br><br>
+  </form>
+  <input type="button" value="Oblicz długości boków" onclick="obliczBoki()">
+  <div style="color:blue; font-size:30px;" id="wyniki"></div>
+  <script>
+    function AB_cup(xa, ya, xb, yb) {
+      return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+    }
+    function BC_cup(xb, yb, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+    }
+    function AC_cup(xa, ya, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+    }
+    function obliczBoki() {
+      var xa_cuper = parseFloat(document.getElementById('xa_cuper').value);
+      var ya_cuper = parseFloat(document.getElementById('ya_cuper').value);
+      var xb_cuper = parseFloat(document.getElementById('xb_cuper').value);
+      var yb_cuper = parseFloat(document.getElementById('yb_cuper').value);
+      var xc_cuper = parseFloat(document.getElementById('xc_cuper').value);
+      var yc_cuper = parseFloat(document.getElementById('yc_cuper').value);
+
+      var ab = AB_cup(xa_cuper, ya_cuper, xb_cuper, yb_cuper);
+      var bc = BC_cup(xb_cuper, yb_cuper, xc_cuper, yc_cuper);
+      var ac = AC_cup(xa_cuper, ya_cuper, xc_cuper, yc_cuper);
+
+      document.getElementById('wyniki').innerHTML =
+        "AB = " + ab.toFixed(2) + " <br>BC = " + bc.toFixed(2) + " <br>AC = " + ac.toFixed(2);
+    }
+  </script>
+</body>
+</html>
+ </textarea>
+ </body>
+</html>
+
+
+</html>
