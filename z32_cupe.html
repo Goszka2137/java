@@ -1,0 +1,31 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function dom(Wysokość_k, Numer_k, Ulica_k, liczba_okien_k)
+{
+this.Wysokość=Wysokość_k;
+this.Numer=Numer_k;
+this.Ulica=Ulica_k;
+this.liczba_okien=liczba_okien_k;
+}
+ dom.prototype.wypisz_cuper = function () 
+ {
+ alert(this.Wysokość + ' ' + this.Numer+ ' ' + this.Ulica+ ' ' +this.liczba_okien);
+ };
+var dom1 = new dom("12m", "67", "Marynarki Polskiej", "8"); 
+var dom2 = new dom('9m', '42', 'Wilków Morskich', '9');
+var dom3 = new dom('10m','7', 'Lenartowicza', '7');
+dom1.wypisz_cuper();
+dom2.wypisz_cuper();
+dom3.wypisz_cuper();
+ document.write("dostęp do właściwości"+"<br>");
+ document.write("dom pierwszy"+" "+dom1.Wysokość+" "+dom1.Numer+" "+dom1.Ulica+" "+dom.liczba_okien+"<p>");
+document.write("dom drugi"+" "+dom2.Wysokość+" "+dom2.Numer+" "+dom2.Ulica+" "+dom.liczba_okien+"<p>");
+document.write("dom trzeci"+" "+dom3.Wysokość+" "+dom3.Numer+" "+dom3.Ulica+" "+dom.liczba_okien+"<p>");
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe
+</body>
+</html>
