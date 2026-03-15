@@ -1,1 +1,79 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24"><!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+ <title>Cuper Z40_e4_JS</title> 
+ <meta charset="utf-8"> 
+</head> 
+<body> 
+ 
+ <h1>Proste działania</h1>
+ <h2>Cuper 3F</h2> 
 
+ <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a"> 
+ <br><br> 
+ <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b"> 
+ <br><br> 
+
+ <input type="button" value="DODAWANIE" onclick="suma_cup()"> 
+ <input type="button" value="ODEJMOWANIE" onclick="roznica_cup()"> 
+ <input type="button" value="MNOŻENIE" onclick="iloczyn_cup()"> 
+ <input type="button" value="DZIELENIE" onclick="iloraz_cup()"> 
+ <input type="button" value="TEORIA-bigus" onclick="teoria_cup()">
+
+ <div id="wynik" style="margin-top:20px; font-weight: bold;"></div> 
+
+ <script>  
+  function pobierz_liczby() {
+      var a = document.getElementById("a").value;
+      var b = document.getElementById("b").value;
+      if (a == "" || b == "") {
+          document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+          return null;
+      }
+      return { a: parseFloat(a), b: parseFloat(b) };
+  }
+
+  function suma_cup() { 
+   var l = pobierz_liczby();
+   if(l) document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (l.a + l.b).toFixed(2);
+  } 
+
+  function roznica_cup() { 
+   var l = pobierz_liczby();
+   if(l) document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (l.a - l.b).toFixed(2);
+  }   
+
+  function iloczyn_cup() { 
+   var l = pobierz_liczby();
+   if(l) document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (l.a * l.b).toFixed(2);
+  }   
+ 
+  function iloraz_cup() { 
+   var l = pobierz_liczby();
+   if(l) {
+       if (l.b == 0) { 
+           document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero."; 
+       } else {         
+           document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (l.a / l.b).toFixed(2);
+       } 
+   }
+  } 
+
+  // Punkt 8: Funkcja teoria_cup() wypisująca linie kodu z wyjaśnieniem
+  function teoria_cup() {
+      document.getElementById("wynik").innerHTML = 
+      "1. &lt;label for=\"a\"&gt;...&lt;/label&gt; - Etykieta powiązana z polem tekstowym o id 'a'.<br>" +
+      "2. &lt;input type=\"button\" ... onclick=\"suma_cup()\"&gt; - Przycisk uruchamiający funkcję dodawania.<br>" +
+      "3. var a = document.getElementById(\"a\").value; - Pobranie wartości z pola 'a' do zmiennej.<br>" +
+      "4. if (a == \"\" || b == \"\") - Sprawdzenie, czy pola nie są puste.<br>" +
+      "5. document.getElementById(\"wynik\").innerHTML = ... - Wypisanie wyniku w treści strony.";
+  }
+ </script> 
+</body> 
+</html>
+<!-- Cuper Z40_e4_JS -->
+   </textarea>
+ </body>
+</html>
