@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title> Przykład użycia pętli </title>
+    <script language="JavaScript">
+        var a_cup = 7;
+        var b_cup = 24;
 
+        for (var j_cup = 1; j_cup <= b_cup; j_cup++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        for (var i_cup = 1; i_cup <= a_cup - 2; i_cup++) {
+            document.write("*");
+
+            for (var j_cup = 1; j_cup <= b_cup - 2; j_cup++) {
+                document.write("&nbsp;&nbsp;");
+            }
+
+            document.write("*<br>");
+        }
+
+        for (var j_cup = 1; j_cup <= b_cup; j_cup++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
