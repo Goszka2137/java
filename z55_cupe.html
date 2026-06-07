@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title> Przykład użycia pętli </title>
+    <script language="JavaScript">
+        var a_cup = parseInt(prompt("podaj a",""));
+        var b_cup = parseInt(prompt("podaj b",""));
 
+        for (var j_cup = 1; j_cup <= b_cup; j_cup++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        var wiersz_cup = "*";
+        for (var j_cup = 1; j_cup <= (b_cup - 2); j_cup++) {
+            wiersz_cup = wiersz_cup + "&nbsp;&nbsp;";
+        }
+        wiersz_cup = wiersz_cup + "*";
+
+        for (var i_cup = 1; i_cup <= (a_cup - 2); i_cup++) {
+            document.write(wiersz_cup + "<br>");
+        }
+
+        for (var j_cup = 1; j_cup <= b_cup; j_cup++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
