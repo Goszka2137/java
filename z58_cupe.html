@@ -1,1 +1,35 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    let liczba1_cup = prompt("Podaj pierwszą liczbę:");
+    let liczba2_cup = prompt("Podaj drugą liczbę:");
+
+    liczba1_cup = parseInt(liczba1_cup);
+    liczba2_cup = parseInt(liczba2_cup);
+
+    if (liczba1_cup == liczba2_cup) {
+        confirm("Liczby są równe");
+    } else if (liczba1_cup < liczba2_cup) {
+        for (let i_cup = liczba1_cup; i_cup <= liczba2_cup; i_cup++) {
+            if (i_cup % 2 == 0) {
+                document.write("<span style='color:green; font-size:30px;'>" + i_cup + "</span><br>");
+            }
+        }
+    } else {
+        for (let i_cup = liczba1_cup; i_cup >= liczba2_cup; i_cup--) {
+            if (i_cup % 2 != 0) {
+                document.write("<span style='color:blue; font-size:10px;'>" + i_cup + "</span><br>");
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+
